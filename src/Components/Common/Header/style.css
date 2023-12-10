@@ -1,6 +1,30 @@
-.header{
-    width:100vw;
-    height:30px;
-    background-color: black ;
-    color: white;
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+    color: var(--white);
+    position: sticky;
+    padding: 1.5rem 3rem;
+}
+
+.logo {
+    font-size: 1.2rem;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+}
+
+.link{
+    color: var(--grey);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.link:hover{
+    color: var(--white);
 }
