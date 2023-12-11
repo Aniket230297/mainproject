@@ -28,3 +28,37 @@
 .link:hover{
     color: var(--white);
 }
+
+.mobile-drawer{
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    .links{
+        display: none;
+    }
+
+    .navbar{
+        padding: 0.8rem;
+    }
+
+    .logo{
+        font-size: 1rem;
+    }
+
+    .mobile-drawer{
+        display: block;
+    }
+
+    .drawer-div{
+        width: 40vw;
+        background-color: var(--black);
+        height: 100vh;
+        padding: 1.5rem;
+    }
+
+    .link{
+        padding-top: 10px;
+    }
+    
+  }

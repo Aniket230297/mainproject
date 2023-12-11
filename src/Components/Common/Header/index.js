@@ -1,4 +1,6 @@
 import './style.css';
+import TemporaryDrawer from './drawer';
+import Button from '../Buttons/Button';
 
 function index() {
   return (
@@ -9,10 +11,15 @@ function index() {
           <a href='#'><p className='link'>Home</p></a>
           <a href='#'><p className='link'>Watchlist</p></a>
           <a href='#'><p className='link'>Compare</p></a>
-          <a href='#'><p className='link'>Dashboard</p></a>
+          <Button text={"Dashboard"} />
           
         </div>
+
+        <div className='mobile-drawer'>
+            <TemporaryDrawer />
+        </div>
     </div>
+    
   )
 }
 
