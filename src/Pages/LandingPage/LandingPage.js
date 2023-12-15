@@ -1,7 +1,9 @@
+
+import Button from '../../Components/Common/Buttons/Button.js'
+import phone from '../../Components/assets/phone.png'
+import gradient from '../../Components/assets/gradient.png'
+import { motion } from 'framer-motion';
 import './style.css';
-import Button from '../../Common/Buttons/Button.js'
-import phone from '../../../Components/assets/phone.png'
-import gradient from '../../../Components/assets/gradient.png'
 
 function Landingpage() {
   return (
@@ -18,7 +20,16 @@ function Landingpage() {
         </div>
 
         <div className='right-div'>
-          <img src={phone} alt='phone' className='phoneImg' />
+          <motion.img src={phone} alt='phone' className='phoneImg'
+          initial={{y:-30}} 
+          animate={{y:30}}
+          transition={{
+            type:"smooth",
+            repeatType:'mirror',
+            duration: 2,
+            repeat:Infinity
+          }}  
+          />
           <img  src={gradient} alt='gradientImg' className='gradientimg'/>
         </div>
     </div>

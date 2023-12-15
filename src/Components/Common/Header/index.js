@@ -1,6 +1,7 @@
 import './style.css';
 import TemporaryDrawer from './drawer';
 import Button from '../Buttons/Button';
+import { Link } from 'react-router-dom';
 
 function index() {
   return (
@@ -8,19 +9,10 @@ function index() {
         <h1 className='logo'>CryptoTracker<span style={{color:"blue"}}>.</span></h1>
 
         <div className='links'>
-          <a href='#'><p className='link'>Home</p></a>
-          <a href='#'><p className='link'>Watchlist</p></a>
-          <a href='#'><p className='link'>Compare</p></a>
-<<<<<<< HEAD
-          <a href='#'><Button text={"Dashboard"} /></a>
-=======
-          <a href='#'>
-            <Button text={"Dashboard"}
-            // outlined={true}
-             onClick={()=>console.log("hello")}
-             /></a>
-         
->>>>>>> 5cc5ddb2084636bd851def6b07fc531b66ecbc69
+          <Link to="/"><p className='link'>Home</p></Link>
+          <Link to="/watchlist "><p className='link'>Watchlist</p></Link>
+          <Link to="/"><p className='link'>Compare</p></Link>
+          <Link to="/dashboard"><Button text={"Dashboard"} /></Link>
           
         </div>
 
