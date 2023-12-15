@@ -11,7 +11,16 @@ function index() {
           <a href='#'><p className='link'>Home</p></a>
           <a href='#'><p className='link'>Watchlist</p></a>
           <a href='#'><p className='link'>Compare</p></a>
+<<<<<<< HEAD
           <a href='#'><Button text={"Dashboard"} /></a>
+=======
+          <a href='#'>
+            <Button text={"Dashboard"}
+            // outlined={true}
+             onClick={()=>console.log("hello")}
+             /></a>
+         
+>>>>>>> 5cc5ddb2084636bd851def6b07fc531b66ecbc69
           
         </div>
 

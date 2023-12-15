@@ -1,0 +1,79 @@
+
+.landing-flex{
+    padding: 1rem 2rem;
+    display: flex;
+    margin-top: 20px;
+}
+
+.left-div{
+        padding: 20px;
+        width:60%;
+      
+}
+
+
+.crypto-heading,.real-time-heading{
+    font-size: 7rem;
+}
+
+.crypto-heading{
+    margin: 0;
+   width:0;
+   
+    -webkit-text-stroke-width: 0.2rem;
+  -webkit-text-stroke-color: var(--white);
+}
+
+.real-time-heading{
+    color: var(--blue);
+}
+
+.btn-flex{
+    display: flex;
+    margin:2rem;
+    gap:1rem;
+}
+
+.crypto-heading:hover{
+   
+    -webkit-text-stroke-width: 0.2rem;
+  -webkit-text-stroke-color:var(--white);
+  -webkit-text-fill-color: var(--black);
+}
+
+.right-div{
+    width: 40%;
+    position:relative;
+   
+}
+
+.phoneImg{
+    position: absolute;
+   margin-left: 100px;
+   width:280px
+   
+}
+
+.gradientimg{
+    width: 250px;
+    margin-left: 150px;
+    margin-top: 70px;
+}
+
+
+
+@media only screen and (max-width: 900px){
+
+    .phoneImg{
+            position: absolute;
+           margin-left: 100px;
+           width:180px
+           
+        }
+        
+        .gradientimg{
+            width: 120px;
+            margin-left: 150px;
+            margin-top: 70px;
+        }
+}
