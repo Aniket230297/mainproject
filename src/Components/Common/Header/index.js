@@ -11,7 +11,12 @@ function index() {
           <a href='#'><p className='link'>Home</p></a>
           <a href='#'><p className='link'>Watchlist</p></a>
           <a href='#'><p className='link'>Compare</p></a>
-          <Button text={"Dashboard"} />
+          <a href='#'>
+            <Button text={"Dashboard"}
+            // outlined={true}
+             onClick={()=>console.log("hello")}
+             /></a>
+         
           
         </div>
 
