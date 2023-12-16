@@ -2,10 +2,8 @@ import React from 'react'
 
 function Dashboard() {
   return (
-    <div>
-        <h1>dashboard component</h1>
-    </div>
+    <div>Dashboard</div>
   )
 }
 
-export default Dashboard;
+export default Dashboard
