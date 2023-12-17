@@ -4,9 +4,10 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import { ThemeProvider, createTheme} from '@mui/material';
+import Gridpage from './Grid/Gridpage';
 
 
-export default function Dashboard({coins}) {
+export default function Dashboard({coins, i}) {
   const [value, setValue] = useState('grid');
 
   const handleChange = (event, newValue) => {
@@ -36,14 +37,11 @@ export default function Dashboard({coins}) {
           </TabList>
        
          <TabPanel value="grid">
-          <div>{
-            coins.map((item, i)=>{
-                return(
-                    <p key={i}>{i+1}. {item.name}</p>
-                )
-            })
-        }
+          <div>
+            <Gridpage coins={coins}/>
           </div>
+
+
           </TabPanel>
         <TabPanel value="list">
           <div>
