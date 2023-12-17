@@ -3,7 +3,7 @@ import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
-import { ThemeProvider, createTheme, theme } from '@mui/material';
+import { ThemeProvider, createTheme} from '@mui/material';
 
 
 export default function Dashboard({coins}) {
@@ -39,7 +39,7 @@ export default function Dashboard({coins}) {
           <div>{
             coins.map((item, i)=>{
                 return(
-                    <p key={i}>{item.name}</p>
+                    <p key={i}>{i+1}. {item.name}</p>
                 )
             })
         }
