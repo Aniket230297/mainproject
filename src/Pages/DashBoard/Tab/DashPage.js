@@ -5,7 +5,7 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import { ThemeProvider, createTheme} from '@mui/material';
 import Gridpage from './Grid/Gridpage';
-
+import dashpage from './dashpage.css';
 
 export default function Dashboard({coins, i}) {
   const [value, setValue] = useState('grid');
@@ -37,8 +37,10 @@ export default function Dashboard({coins, i}) {
           </TabList>
        
          <TabPanel value="grid">
-          <div>
-            <Gridpage coins={coins}/>
+          <div className='grid-flex'>
+            {coins.map((coin, i)=>{
+              return <Gridpage coin={coin} key={i}/>
+            })}
           </div>
 
 

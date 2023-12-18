@@ -1,0 +1,77 @@
+
+.gridContainer{
+    width:250px;
+    height:250px;
+    background-color: var(--darkgrey);
+    border: 2px solid var(--darkgrey);
+    border-radius: 10px;
+}
+
+.info-flex{
+    display: flex;
+    gap:1rem;
+}
+
+.coin-logo{
+    width:50px;
+    height:50px;
+    padding: 10px;
+}
+
+.coin-info{
+    padding: 10px;
+    margin-top: 6px;
+}
+
+.coinSymbol{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.coinName{
+    font-size: 13px;
+    color: var(--grey);
+    margin-top: 5px;
+}
+
+
+
+.chip-flex{
+    display: flex;
+    justify-content: flex-start;
+    gap:1rem;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.coin-percentage{ 
+    border:1px solid var(--green);
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1.5rem;
+    color:var(--green);
+    border-radius: 1rem;
+}
+
+.trending-icon{
+    width:13rem;
+    height:13rem;
+    padding:5px;
+    border-radius: 50%;
+    display: flex;
+    border:1px solid var(--green);
+    align-items: center;
+    justify-content: center;
+    color:var(--green) ;
+}
+
+.coin-red{
+    border:1px solid var(--red)  !important ;
+    color: var(--red) !important;
+}
+
+.down-icon{
+    border:1px solid var(--red);
+    color:var(--red) ;   
+}
