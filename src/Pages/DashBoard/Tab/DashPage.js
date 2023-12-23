@@ -6,6 +6,7 @@ import TabPanel from '@mui/lab/TabPanel';
 import { ThemeProvider, createTheme} from '@mui/material';
 import Gridpage from './Grid/Gridpage';
 import dashpage from './dashpage.css';
+import List from './List/List';
 
 export default function Dashboard({coins, i}) {
   const [value, setValue] = useState('grid');
@@ -46,9 +47,11 @@ export default function Dashboard({coins, i}) {
 
           </TabPanel>
         <TabPanel value="list">
-          <div>
-            mapping for Lists
-          </div>
+          <table className='list-table'>
+            {coins.map((item, i)=>{
+              return <List coin={item} key={i} />
+            })}
+          </table>
         </TabPanel>
        
       </TabContext>

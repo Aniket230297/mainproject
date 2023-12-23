@@ -5,6 +5,12 @@
     background-color: var(--darkgrey);
     border: 2px solid var(--darkgrey);
     border-radius: 10px;
+    padding:1rem;
+}
+
+.gridContainer:hover{
+    border:2px solid var(--red);
+    transition: all 0.3s;
 }
 
 .info-flex{
@@ -74,4 +80,38 @@
 .down-icon{
     border:1px solid var(--red);
     color:var(--red) ;   
+}
+
+.info-container{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+
+.coin-price{
+    color:var(--green);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem;
+    margin-top: 1rem;
+}
+
+.coin-price-red{
+    color:var(--red);
+}
+
+.total-volume{
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--grey);
+}
+
+.coin-percentage-hovering-green:hover{
+    background-color: var(--green);
+    color: var(--white);
+}
+
+.coin-percentage-hovering-red:hover{
+    background-color: var(--red);
+    color: var(--white) !important;
 }

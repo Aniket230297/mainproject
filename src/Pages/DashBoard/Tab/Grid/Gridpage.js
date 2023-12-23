@@ -16,16 +16,17 @@ function Gridpage({coin , i}) {
         </div>
 
         {coin.price_change_percentage_24h > 0 ? ( <div className='chip-flex'>
-              <div className='coin-percentage'>{coin.price_change_percentage_24h.toFixed(2)}% </div>
-              <TrendingUpRoundedIcon className='trending-icon' />
+              <div className='coin-percentage coin-percentage-hovering-green'>{coin.price_change_percentage_24h.toFixed(2)}% </div>
+              <TrendingUpRoundedIcon className='trending-icon coin-percentage-hovering-green' />
               </div> ):(  <div className='chip-flex '>
-              <div className='coin-percentage coin-red'>{coin.price_change_percentage_24h.toFixed(2)}% </div>
-              <TrendingDownRoundedIcon className='trending-icon down-icon'/>
+              <div className='coin-percentage coin-red coin-percentage-hovering-red'>{coin.price_change_percentage_24h.toFixed(2)}% </div>
+              <TrendingDownRoundedIcon className='trending-icon down-icon coin-percentage-hovering-red'/>
               </div>
           )}  
                   
-              <div className='info-container'>
-                    <h3 className='coin-price'>{coin.Current_price.toLocaleString()}</h3>
+              <div className='info-container'>{coin.price_change_percentage_24h > 0 ? (
+                    <h3 className='coin-price'>${coin.current_price.toLocaleString()}</h3>):(
+                      <h3 className='coin-price coin-price-red'>${coin.current_price.toLocaleString()}</h3>)}
                     <p className='total-volume'>Total Volume: {coin.total_volume.toLocaleString()}</p>
                     <p className='total-volume'>Total Cap: {coin.market_cap.toLocaleString()}</p>
               </div>
