@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './style.css';
 
-function index({heading, desc}) {
+function Index({heading, desc}) {
   const shortdesc = desc.slice(0, 350) + "<p style='color:Var(--grey)'> Read more...</p>"
   const longdesc= desc + "<p style='color:Var(--grey)'> Read more...</p>"
 
@@ -9,9 +9,14 @@ function index({heading, desc}) {
   return (
     <div className='wrapper-div'>
       <h2>{heading}</h2>
-      <p className="coin-desc" onClick={} dangerouslySetInnerHTML={{__html: shortdesc}} />
+    
+      {(desc.length >350)?  <p className="coin-desc" onClick={()=>setFlag(!flag)}
+        dangerouslySetInnerHTML={{__html: !flag? shortdesc : longdesc}} />:
+          <p className="coin-desc" onClick={()=>setFlag(!flag)}
+        dangerouslySetInnerHTML={{__html: !flag? shortdesc : longdesc}} /> 
+         }
     </div>
   )
 }
 
-export default index
+export default Index;

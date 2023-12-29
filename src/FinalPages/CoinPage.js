@@ -4,10 +4,10 @@ import { useEffect } from 'react';
 import axios from 'axios';
 import { useState } from 'react';
 import Loader from '../Components/Common/Loader/index'
-import { CoinObject } from '../Components/functions/ConvertCoinObject';
-import List from './DashBoard/Tab/List/List';
+import { CoinObject } from '../Components/Functions/ConvertCoinObject.js';
+import List from '../Pages/DashBoard/Tab/List/List';
 import Header from "../Components/Common/Header/index";
-import CoinInfo from './Coin/CoinnInfo/index'
+import CoinInfo from '../Pages/Coin/CoinnInfo/Index';
 
 function CoinPage() {
     const [isLoading, setIsLoading]= useState(true);
@@ -35,9 +35,6 @@ function CoinPage() {
         <CoinInfo heading={coinData.name} desc={coinData.desc}/>
     </>)}
     </div>
-
-    
-    
   )
 }
 
