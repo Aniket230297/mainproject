@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mainproject/static/css/main.820e9e94.css",
+    "main.js": "/mainproject/static/js/main.124cf443.js",
+    "static/media/gradient.png": "/mainproject/static/media/gradient.17a9e4f2bc18e4e30940.png",
+    "static/media/phone.png": "/mainproject/static/media/phone.30b0f0234a4726e8d246.png",
+    "index.html": "/mainproject/index.html",
+    "main.820e9e94.css.map": "/mainproject/static/css/main.820e9e94.css.map",
+    "main.124cf443.js.map": "/mainproject/static/js/main.124cf443.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.820e9e94.css",
+    "static/js/main.124cf443.js"
+  ]
+}
