@@ -1,0 +1,19 @@
+.wrapper-div{
+    display: block;
+    width: 90%;
+    background-color: var(--darkgrey);
+    padding: 1.5rem;
+    margin: 0.5rem;
+}
+
+.coin-desc{
+    font-size: 0.9rem;
+}
+
+.coin-desc >a{
+    text-decoration: underline;
+}
+
+.coin-desc> a:hover{
+    color: var(--blue);
+}
