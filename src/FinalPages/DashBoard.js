@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import Header from '../Components/Common/Header/index.js'
-import DashPage from './DashBoard/Tab/DashPage.js'
+import DashPage from '../Pages/DashBoard/Tab/DashPage.js'
 import axios from "axios";
-import Search from './DashBoard/Tab/Search/index.js';
-import PaginationControlled from './DashBoard/Tab/Pagination/Pagination.js';
+import Search from '../Pages/DashBoard/Tab/Search/index.js';
+// import PaginationControlled from '../Pages/DashBoard/Tab/Pagination/Pagination.js';
 import CircularIndeterminate from '../Components/Common/Loader/index.js';
 
 
