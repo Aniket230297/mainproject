@@ -2,9 +2,11 @@ import React from 'react'
 import './style.css';
 import TrendingUpRoundedIcon from '@mui/icons-material/TrendingUpRounded';
 import TrendingDownRoundedIcon from '@mui/icons-material/TrendingDownRounded';
+import { Link } from 'react-router-dom';
 
 function Gridpage({coin , i}) {
   return (
+       <Link to={`/coin/${coin.id}`}>
     <div className='gridContainer'>
         <div className='info-flex'>
           <img src={coin.image} className='coin-logo' alt='img' />
@@ -32,6 +34,7 @@ function Gridpage({coin , i}) {
               </div>
                   
 </div>
+</Link>
     
   );
 }

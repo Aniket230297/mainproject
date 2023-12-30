@@ -1,9 +1,10 @@
 .wrapper-div{
     display: block;
-    width: 90%;
+    width: 86%;
     background-color: var(--darkgrey);
     padding: 1.5rem;
     margin: 0.5rem;
+    margin-left: 4rem;
 }
 
 .coin-desc{
