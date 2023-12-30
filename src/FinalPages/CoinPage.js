@@ -19,13 +19,13 @@ function CoinPage() {
 
     useEffect(()=>{
         if(id){
-           
+           getData();
 
         // dummy for prices
         }
     },[id]);
 
-  async function  getData(){
+  async function getData(){
         
      const data = await getCoinData(id);
       if(data){
