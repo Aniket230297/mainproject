@@ -7,7 +7,7 @@ import Loader from '../Components/Common/Loader/index'
 import { CoinObject } from '../Components/Functions/ConvertCoinObject.js';
 import List from '../Pages/DashBoard/Tab/List/List';
 import Header from "../Components/Common/Header/index";
-import CoinInfo from '../Pages/Coin/CoinnInfo/Index';
+import CoinInfo from '../Pages/Coin/CoinnInfo/Index.js';
 
 function CoinPage() {
     const [isLoading, setIsLoading]= useState(true);
@@ -38,4 +38,4 @@ function CoinPage() {
   )
 }
 
-export default CoinPage
+export default CoinPage;
