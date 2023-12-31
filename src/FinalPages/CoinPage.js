@@ -7,12 +7,13 @@ import Loader from '../Components/Common/Loader/index'
 import { CoinObject } from '../Components/Functions/ConvertCoinObject.js';
 import List from '../Pages/DashBoard/Tab/List/List.js'
 import Header from "../Components/Common/Header/index";
-import CoinInfo from '../Pages/Coin/CoinnInfo/Index.js';
+import CoinInfo from '../Pages/Coin/CoinnInfo/index.js';
 import { getCoinData } from '../Components/Functions/getCoinData.js';
 import { getCoinPrices } from '../Components/Functions/getCoinPrices.js';
 import Linechart from '../Pages/Coin/LineChart/Linechart.js';
 import { ConvertDate } from '../Components/Functions/ConvertDate.js';
 import SelectDays from '../Pages/Coin/SelectDays/index.js';
+import { SettingChartData } from '../Components/Functions/SettingChartData.js';
 
 function CoinPage() {
     const [isLoading, setIsLoading] = useState(true);
@@ -20,6 +21,8 @@ function CoinPage() {
     const [day, setDay] = useState(30);
     const [chartData, setChartData] = useState({});
     const { id } = useParams();
+
+    
 
     useEffect(() => {
         if (id) {
@@ -54,13 +57,24 @@ function CoinPage() {
         }
     }
 
+    const handledaysChange = async (event) => {
+        setIsLoading(true);
+        setDay(event.target.value);
+        console.log(event.target.value);
+        const prices = await getCoinPrices(id, event.target.value);
+        if (prices.length > 0) {
+            SettingChartData(setChartData, prices);
+            setIsLoading(false);
+        }
+      };
+
     return (
         <div>{isLoading ? (<><Loader /></>) : (
             <>
                 <Header />
                 <List coin={coinData} />
                 <div className='wrapper-div'>
-                    <SelectDays />
+                    <SelectDays day={day} handledaysChange={handledaysChange} />
                     <Linechart chartData={chartData} />
                 </div>
                 <CoinInfo heading={coinData.name} desc={coinData.desc} />

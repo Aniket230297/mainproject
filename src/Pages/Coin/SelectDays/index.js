@@ -1,18 +1,10 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import './style.css';
 
-export default function SelectDays() {
-  const [day, setDay] = React.useState(7);
-
-  const handleChange = (event) => {
-    setDay(event.target.value);
-    console.log(event.target.value)
-  };
+export default function SelectDays({day, handledaysChange}) {
+ 
 
   let style={
     color:"var(--black)",
@@ -24,16 +16,31 @@ export default function SelectDays() {
 
         {/* <InputLabel id="demo-simple-select-label">Day</InputLabel> */}
         <Select className='select'
+           sx={{
+            height:"2.5rem",
+            color:"var(--white)",
+            "& .MuiOutlinedInput-notchedOutline":{
+              borderColor:"var(--white)",
+            },
+            "& .MuiSvgIcon-root":{
+              color:"var(--white)",
+            },
+            "&:hover":{
+            "&& fieldset":{
+              borderColor:"#3a80e9"
+            }
+          }
+           }}
           labelId="demo-simple-select-label"
           id="demo-simple-select"
           value={day}
-          onChange={handleChange}
+          onChange={handledaysChange}
         >
-          <MenuItem value={7} sx={{...style}}>7 Days</MenuItem>
-          <MenuItem value={30}>30 Days</MenuItem>
-          <MenuItem value={60}>60 Days</MenuItem>
-          <MenuItem value={120}>120 Days</MenuItem>
-          <MenuItem value={365}>1 Year</MenuItem>
+          <MenuItem value={7} sx={{color:"var(--black)"}}>7 Days</MenuItem>
+          <MenuItem value={30} sx={{color:"var(--black)"}}>30 Days</MenuItem>
+          <MenuItem value={60} sx={{color:"var(--black)"}}>60 Days</MenuItem>
+          <MenuItem value={120} sx={{color:"var(--black)"}}>120 Days</MenuItem>
+          <MenuItem value={365} sx={{color:"var(--black)"}}>1 Year</MenuItem>
         </Select>
       
     </div>
