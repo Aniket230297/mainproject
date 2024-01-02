@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { get100Coins } from '../../../Components/Functions/get100Coins.js';
 import { MenuItem } from '@mui/material';
 import {Select} from '@mui/material';
+import './style.css';
 
 function SelectCoins() {
     const [compare1 , setCompare1]=useState("bitcoin");
@@ -39,7 +40,8 @@ function SelectCoins() {
     }
 
   return (
-    <div>
+    <div className='selectcoinsContainer'>
+        <p>Crypto 1</p>
         <Select className='select'
            sx={style}
           labelId="demo-simple-select-label"

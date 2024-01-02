@@ -1,0 +1,5 @@
+.selectcoinsContainer{
+    display: flex;
+    align-items: center;
+    gap:0rem, 1rem;
+}
