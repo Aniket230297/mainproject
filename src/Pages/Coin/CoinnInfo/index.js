@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './style.css';
 
-function Index({heading, desc}) {
+function CoinnInfo({heading, desc}) {
   const shortdesc = desc.slice(0, 350) + "<p style='color:Var(--grey)'> Read more...</p>"
   const longdesc= desc + "<p style='color:Var(--grey)'> Read Less...</p>"
 
@@ -16,4 +16,4 @@ function Index({heading, desc}) {
   )
 }
 
-export default Index;
+export default CoinnInfo;

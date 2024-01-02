@@ -5,6 +5,7 @@ import axios from "axios";
 import Search from '../Pages/DashBoard/Tab/Search/index.js';
 // import PaginationControlled from '../Pages/DashBoard/Tab/Pagination/Pagination.js';
 import CircularIndeterminate from '../Components/Common/Loader/index.js';
+import { get100Coins } from '../Components/Functions/get100Coins.js';
 
 
 const DashBoard = ()=>{
@@ -19,11 +20,20 @@ const DashBoard = ()=>{
     const filteredval= coins.filter((item)=>item.name.toLowerCase().includes(search.toLowerCase()));
 
     useEffect(()=>{
-      axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en")
-      .then((res)=>setCoins(res.data))
-      .catch((err)=>console.log(err))
-      setIsLoading(false)
+      // axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en")
+      // .then((res)=>setCoins(res.data))
+      // .catch((err)=>console.log(err))
+      // setIsLoading(false)
+        getData();
     },[])
+
+    const getData= async ()=>{
+         const coindata= await get100Coins();
+         if(coindata){
+         setCoins(coindata);
+         setIsLoading(false); 
+         }
+    }
 
       return(
         <>{isLoading ?(<CircularIndeterminate />):(

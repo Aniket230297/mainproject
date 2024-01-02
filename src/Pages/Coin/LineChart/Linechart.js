@@ -13,6 +13,16 @@ function Linechart({chartData, priceType, multiAxis}) {
         interactions:{
                 mode:"index",
                 intersect:false,
+        },
+        scales: {
+            y: {
+                ticks: {
+                    // Include a dollar sign in the ticks
+                    callback: function(value, index, ticks) {
+                        return '$' + value.toLocaleString();
+                    }
+                }
+            }
         }
     }
   return <Line data={chartData} options={options} />

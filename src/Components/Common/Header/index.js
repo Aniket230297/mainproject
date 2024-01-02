@@ -11,7 +11,7 @@ function index() {
         <div className='links'>
           <Link to="/"><p className='link'>Home</p></Link>
           <Link to="/watchlist "><p className='link'>Watchlist</p></Link>
-          <Link to="/"><p className='link'>Compare</p></Link>
+          <Link to="/compare"><p className='link'>Compare</p></Link>
           <Link to="/dashboard"><Button text={"Dashboard"} /></Link>
           
         </div>

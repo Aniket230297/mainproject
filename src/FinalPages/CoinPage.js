@@ -14,6 +14,7 @@ import Linechart from '../Pages/Coin/LineChart/Linechart.js';
 import { ConvertDate } from '../Components/Functions/ConvertDate.js';
 import SelectDays from '../Pages/Coin/SelectDays/index.js';
 import { SettingChartData } from '../Components/Functions/SettingChartData.js';
+import TogglePriceType from '../Pages/Coin/PriceType/index.js';
 
 function CoinPage() {
     const [isLoading, setIsLoading] = useState(true);
@@ -21,6 +22,7 @@ function CoinPage() {
     const [day, setDay] = useState(30);
     const [chartData, setChartData] = useState({});
     const { id } = useParams();
+    const [priceType, setPriceType] = useState("prices"); 
 
     
 
@@ -34,24 +36,10 @@ function CoinPage() {
         const data = await getCoinData(id);
         if (data) {
             CoinObject(setCoinData, data);
-            const prices = await getCoinPrices(id, day);
+            const prices = await getCoinPrices(id, day, priceType);
             if (prices.length > 0) {
                 console.log("anik");
-                
-                setChartData({
-                    labels: prices.map((price)=>ConvertDate(price[0])),
-                    datasets: [{
-                        type: 'line',
-                        data: prices.map((price)=>price[1]),
-                        borderColor: '#3a80e9',
-                        borderWidth:2,
-                        fill:true,
-                        tension : 0.25,
-                        backgroundColor: "rgba(58, 128, 233, 0.1)",
-                        pointRadius:0
-                    }]
-                })
-               
+                SettingChartData(setChartData, prices);
                 setIsLoading(false);
             }
         }
@@ -60,13 +48,27 @@ function CoinPage() {
     const handledaysChange = async (event) => {
         setIsLoading(true);
         setDay(event.target.value);
-        console.log(event.target.value);
-        const prices = await getCoinPrices(id, event.target.value);
+        const prices = await getCoinPrices(id, event.target.value, priceType);
         if (prices.length > 0) {
             SettingChartData(setChartData, prices);
             setIsLoading(false);
         }
       };
+
+  
+
+    const  handleToggleChange = async (event, newType) => {
+        setIsLoading(true);
+        setPriceType(newType);
+        const prices = await getCoinPrices(id, day, newType);
+        if ( prices.length > 0) {
+            SettingChartData(setChartData, prices);
+            setIsLoading(false);
+        }
+      };
+
+  
+    
 
     return (
         <div>{isLoading ? (<><Loader /></>) : (
@@ -75,6 +77,7 @@ function CoinPage() {
                 <List coin={coinData} />
                 <div className='wrapper-div'>
                     <SelectDays day={day} handledaysChange={handledaysChange} />
+                    <TogglePriceType handleToggleChange={handleToggleChange} priceType={priceType} />
                     <Linechart chartData={chartData} />
                 </div>
                 <CoinInfo heading={coinData.name} desc={coinData.desc} />
