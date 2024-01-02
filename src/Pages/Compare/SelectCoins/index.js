@@ -47,7 +47,7 @@ function SelectCoins() {
           value={compare1}
           onChange={handledaysChange}
         >
-            {coin.map((coin)=>(<MenuItem value={coin.id} key={coin.id}>{coin.name}</MenuItem>))}
+            {coin.map((coin)=>(<MenuItem value={coin.id} key={coin.id} sx={{color:"var(--black)"}}>{coin.name}</MenuItem>))}
         </Select> 
     </div>
   )
