@@ -1,5 +1,6 @@
 .selectcoinsContainer{
     display: flex;
     align-items: center;
-    gap:0rem, 1rem;
+    gap:2rem;
+    margin-left: 2rem;
 }
