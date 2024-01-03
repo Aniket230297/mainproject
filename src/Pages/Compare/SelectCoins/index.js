@@ -6,8 +6,8 @@ import {Select} from '@mui/material';
 import './style.css';
 
 function SelectCoins() {
-    const [compare1 , setCompare1]=useState("bitcoin");
-    const [coin , setCoin]=useState([])
+    const [compare1 , setCompare1]=useState('bitcoin');
+    const [coin , setCoin]=useState([]);
     console.log(coin);
 
     const style={
@@ -32,6 +32,7 @@ function SelectCoins() {
 
     const getdata= async ()=>{
         const coindata = await get100Coins();
+        console.log(coindata);
         setCoin(coindata);
     }
 
