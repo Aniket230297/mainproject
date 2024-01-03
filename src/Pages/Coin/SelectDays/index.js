@@ -1,14 +1,10 @@
 import * as React from 'react';
 import MenuItem from '@mui/material/MenuItem';
-import Select from '@mui/material/Select';
+import { Select } from '@mui/material';
 import './style.css';
 
 export default function SelectDays({day, handledaysChange}) {
  
-
-  let style={
-    color:"var(--black)",
-  }
 
   return (
     <div className='selectdiv'>
@@ -42,7 +38,7 @@ export default function SelectDays({day, handledaysChange}) {
           <MenuItem value={120} sx={{color:"var(--black)"}}>120 Days</MenuItem>
           <MenuItem value={365} sx={{color:"var(--black)"}}>1 Year</MenuItem>
         </Select>
-      
+        
     </div>
   );
 }
