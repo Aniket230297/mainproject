@@ -6,11 +6,9 @@ import {Select} from '@mui/material';
 import './style.css';
 
 
-function SelectCoins() {
-    const [Crypto1, setCrypto1]=useState("bitcoin");
-    const [Crypto2, setCrypto2]=useState("ethereum");
+function SelectCoins({Crypto1, Crypto2, setCrypto1, setCrypto2}) {
+    
     const [allcoins , setAllCoins]=useState([]);
-
 
     const style={
         height:"2.5rem",
