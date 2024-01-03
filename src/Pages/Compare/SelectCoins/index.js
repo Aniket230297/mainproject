@@ -4,18 +4,12 @@ import { get100Coins } from '../../../Components/Functions/get100Coins.js';
 import { MenuItem } from '@mui/material';
 import {Select} from '@mui/material';
 import './style.css';
+import SelectDays from '../../Coin/SelectDays/index.js';
 
-<<<<<<< HEAD
-function SelectCoins() {
-    const [compare1 , setCompare1]=useState('bitcoin');
-    const [coin , setCoin]=useState([]);
-    console.log(coin);
-=======
 
 function SelectCoins({Crypto1, Crypto2, setCrypto1, setCrypto2}) {
     
     const [allcoins , setAllCoins]=useState([]);
->>>>>>> 3ba1a90518ad803319dde4bde8c13eeae0e8f462
 
     const style={
         height:"2.5rem",
@@ -38,15 +32,6 @@ function SelectCoins({Crypto1, Crypto2, setCrypto1, setCrypto2}) {
     },[])
 
     const getdata= async ()=>{
-<<<<<<< HEAD
-        const coindata = await get100Coins();
-        console.log(coindata);
-        setCoin(coindata);
-    }
-
-    const handledaysChange=(event)=>{
-            setCompare1(event.target.value)
-=======
         const mycoins = await get100Coins();
         setAllCoins(mycoins);
         }
@@ -59,7 +44,6 @@ function SelectCoins({Crypto1, Crypto2, setCrypto1, setCrypto2}) {
            { setCrypto1(event.target.value)
               console.log(event.target.value);
           }
->>>>>>> 3ba1a90518ad803319dde4bde8c13eeae0e8f462
     }
 
   return (
@@ -82,7 +66,9 @@ function SelectCoins({Crypto1, Crypto2, setCrypto1, setCrypto2}) {
           onChange={(event)=>handledaysChange(event, true)}
         >
             {allcoins.map((coin)=>(<MenuItem value={coin.id} sx={{color:"var(--black)"}}>{coin.name}</MenuItem>))}
-        </Select> 
+        </Select>
+
+        
     </div>
   )
   }
