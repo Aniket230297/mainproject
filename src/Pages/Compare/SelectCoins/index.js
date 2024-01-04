@@ -4,10 +4,10 @@ import { get100Coins } from '../../../Components/Functions/get100Coins.js';
 import { MenuItem } from '@mui/material';
 import {Select} from '@mui/material';
 import './style.css';
-import SelectDays from '../../Coin/SelectDays/index.js';
 
 
-function SelectCoins({Crypto1, Crypto2, setCrypto1, setCrypto2}) {
+
+function SelectCoins({Crypto1, Crypto2, handleCoinChange}) {
     
     const [allcoins , setAllCoins]=useState([]);
 
@@ -36,15 +36,7 @@ function SelectCoins({Crypto1, Crypto2, setCrypto1, setCrypto2}) {
         setAllCoins(mycoins);
         }
     
-    const handledaysChange=(event, isCoin2)=>{
-           if(isCoin2){
-            setCrypto2(event.target.value)
-            console.log(event.target.value);
-           }else
-           { setCrypto1(event.target.value)
-              console.log(event.target.value);
-          }
-    }
+    
 
   return (
     <div className='selectcoinsContainer'>
@@ -53,7 +45,7 @@ function SelectCoins({Crypto1, Crypto2, setCrypto1, setCrypto2}) {
            sx={style}
           id="demo-simple-select"
           value={Crypto1}
-          onChange={(event)=>handledaysChange(event, false)}
+          onChange={(event)=>handleCoinChange(event, false)}
         >
             {allcoins.map((coin)=>(<MenuItem value={coin.id} sx={{color:"var(--black)"}}>{coin.name}</MenuItem>))}
         </Select> 
@@ -63,7 +55,7 @@ function SelectCoins({Crypto1, Crypto2, setCrypto1, setCrypto2}) {
            sx={style}
           id="demo-simple-select"
           value={Crypto2}
-          onChange={(event)=>handledaysChange(event, true)}
+          onChange={(event)=>handleCoinChange(event, true)}
         >
             {allcoins.map((coin)=>(<MenuItem value={coin.id} sx={{color:"var(--black)"}}>{coin.name}</MenuItem>))}
         </Select>

@@ -3,12 +3,12 @@ import MenuItem from '@mui/material/MenuItem';
 import { Select } from '@mui/material';
 import './style.css';
 
-export default function SelectDays({day, handledaysChange}) {
+export default function SelectDays({day, handledaysChange, PTag}) {
  
 
   return (
     <div className='selectdiv'>
-      <p>Price Change in</p>
+     {!PTag && <p>Price Change in</p>}
 
         {/* <InputLabel id="demo-simple-select-label">Day</InputLabel> */}
         <Select className='select'
