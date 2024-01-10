@@ -14,8 +14,12 @@ function App() {
             <Routes>
                 <Route path="/" element={<Homepage />} />
                 <Route path="/dashboard" element={<Dashboard />} />
+<<<<<<< HEAD
                 <Route path="/coin/:id" element={<CoinPage />} />
               
+=======
+                <Route path="/coin/:id" element={<CoinPage />} /> 
+>>>>>>> af26d3799f17df861b4faadd7f797b5359d30a49
             </Routes>
       
       </BrowserRouter>
