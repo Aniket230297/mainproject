@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Homepage from './FinalPages/Homepage.js'
 import Dashboard from './FinalPages/DashBoard.js';
 import CoinPage from './FinalPages/CoinPage.js';
-import ComparePage from './FinalPages/ComparePage.js';
+
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
                 <Route path="/" element={<Homepage />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/coin/:id" element={<CoinPage />} />
-                <Route path="/compare"element={<ComparePage />} />
+              
             </Routes>
       
       </BrowserRouter>

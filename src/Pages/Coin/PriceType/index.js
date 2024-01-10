@@ -10,7 +10,7 @@ export default function TogglePriceType({handleToggleChange, priceType}) {
     <div className="togglecontainer" >
     <ToggleButtonGroup
       value={priceType}
-      exclusive
+      // exclusive
       onChange={handleToggleChange}
       aria-label="text alignment"
       sx={{

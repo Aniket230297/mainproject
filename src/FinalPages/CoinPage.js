@@ -1,7 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
-import axios from 'axios';
 import { useState } from 'react';
 import Loader from '../Components/Common/Loader/index'
 import { CoinObject } from '../Components/Functions/ConvertCoinObject.js';
@@ -11,7 +10,7 @@ import CoinInfo from '../Pages/Coin/CoinnInfo/index.js';
 import { getCoinData } from '../Components/Functions/getCoinData.js';
 import { getCoinPrices } from '../Components/Functions/getCoinPrices.js';
 import Linechart from '../Pages/Coin/LineChart/Linechart.js';
-import { ConvertDate } from '../Components/Functions/ConvertDate.js';
+// import { ConvertDate } from '../Components/Functions/ConvertDate.js';
 import SelectDays from '../Pages/Coin/SelectDays/index.js';
 import { SettingChartData } from '../Components/Functions/SettingChartData.js';
 import TogglePriceType from '../Pages/Coin/PriceType/index.js';

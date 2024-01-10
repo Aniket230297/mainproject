@@ -5,8 +5,8 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import { ThemeProvider, createTheme} from '@mui/material';
 import Gridpage from './Grid/Gridpage';
-import dashpage from './dashpage.css';
 import List from './List/List';
+import "./dashpage.css";
 
 export default function Dashboard({coins, i}) {
   const [value, setValue] = useState('grid');

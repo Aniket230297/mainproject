@@ -5,7 +5,7 @@ import {Chart as ChartJS} from 'chart.js/auto';
 function Linechart({chartData, priceType, multiAxis}) {
     const options={
         plugins:{
-            legend:{
+            legend:{ 
                 display:multiAxis ? true: false,
             }
         },
