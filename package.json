@@ -1,7 +1,6 @@
 {
   "name": "crypto-tracker",
   "version": "0.1.0",
-  "homepage": "https://Aniket230297.github.io/mainproject",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",

@@ -1,11 +1,7 @@
 import React, { useState } from 'react'
 import './style.css';
 
-<<<<<<< HEAD:src/Pages/Coin/CoinnInfo/index.js
-function CoinnInfo({heading, desc}) {
-=======
 function Coininfo({heading, desc}) {
->>>>>>> f7ae463853dfa20d4fbdaabe82b3f929be1382fa:src/Pages/Coin/CoinnInfo/Coininfo.js
   const shortdesc = desc.slice(0, 350) + "<p style='color:Var(--grey)'> Read more...</p>"
   const longdesc= desc + "<p style='color:Var(--grey)'> Read Less...</p>"
 
@@ -20,8 +16,5 @@ function Coininfo({heading, desc}) {
   )
 }
 
-<<<<<<< HEAD:src/Pages/Coin/CoinnInfo/index.js
-export default CoinnInfo;
-=======
+
 export default Coininfo;
->>>>>>> f7ae463853dfa20d4fbdaabe82b3f929be1382fa:src/Pages/Coin/CoinnInfo/Coininfo.js
