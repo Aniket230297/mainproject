@@ -1,8 +1,9 @@
 import React from 'react'
 import './style.css';
+import { Link } from 'react-router-dom';
 import TrendingUpRoundedIcon from '@mui/icons-material/TrendingUpRounded';
 import TrendingDownRoundedIcon from '@mui/icons-material/TrendingDownRounded';
-import { Link } from 'react-router-dom';
+
 
 function Gridpage({coin , i}) {
   return (
